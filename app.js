@@ -1,5 +1,5 @@
+
 let listaAmigos  = [];
-const ulResultado = document.getElementById("resultado");
 // Funcion Agregar amigo"
 function agregarAmigo(){
     // Declarando variables dentro de la función
@@ -44,6 +44,7 @@ function actualizarLista(){
 
 // Funcion Sortear amigo
 function sortearAmigo(){
+    const ulResultado = document.getElementById("resultado");
     // Validar disponibilidad de amigos.
     if(listaAmigos.length === 0){
         alert("No hay amigos disponible para el sorteo.");
