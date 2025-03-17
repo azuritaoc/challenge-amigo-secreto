@@ -1,6 +1,4 @@
-
 let listaAmigos  = [];
-const ulListaAmigos = document.getElementById("listaAmigos");
 const ulResultado = document.getElementById("resultado");
 // Funcion Agregar amigo"
 function agregarAmigo(){
@@ -28,4 +26,18 @@ function agregarAmigo(){
 
     //Actualizar lista en el html
     actualizarLista();
+}
+
+// Funcion actualizar la lista de amigo en el contenedor}
+function actualizarLista(){
+    const ulListaAmigos = document.getElementById("listaAmigos");
+    // Limpiar el contenedor actual de la lista
+    ulListaAmigos.innerHTML = "";
+
+    // Recorrer array con ciclo for
+    for(let i = 0; i<listaAmigos.length;i++){ 
+        const li = document.createElement('li'); // Se crea el elemento hijo lista.
+        li.textContent = listaAmigos[i]; // Se añade el contenido a la variable de la lista recorrida.
+        ulListaAmigos.appendChild(li); // Agrega el elemento hijo al padre listaAmigos.
+    }
 }
