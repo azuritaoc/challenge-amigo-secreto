@@ -41,3 +41,17 @@ function actualizarLista(){
         ulListaAmigos.appendChild(li); // Agrega el elemento hijo al padre listaAmigos.
     }
 }
+
+// Funcion Sortear amigo
+function sortearAmigo(){
+    // Validar disponibilidad de amigos.
+    if(listaAmigos.length === 0){
+        alert("No hay amigos disponible para el sorteo.");
+        return;
+    }
+    // Generar indice aleatorio.
+    const random = Math.floor(Math.random()*listaAmigos.length);
+    const amigoSecreto = listaAmigos[random];
+    // Mostrar amigo sorteado en html
+    ulResultado.innerHTML = `El amigo secreto es <strong> ${amigoSecreto} </strong>` ;  // TextContent solo toma el texto  , y si va etiqueita tmb iria. 
+    }
